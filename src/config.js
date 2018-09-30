@@ -4,7 +4,7 @@ const host = {
   dev: '/api',
   test: '',
   prod: '',
-}[env];
+} [env];
 const apiVersion = '/v1'; // 接口版本
 
 const config = {
@@ -14,7 +14,7 @@ const config = {
     host,
     home: `${host}/${apiVersion}/home`,
   },
-  constant: {
+  constants: {
     // 通过分享消息进小程序的场景值
     SHARE_SCENE_CODE: [
       1017, // 前往体验版入口
