@@ -1,11 +1,11 @@
 import env from '../env';
 
 const host = {
-  dev: '',
+  dev: '/api',
   test: '',
   prod: '',
 }[env];
-const apiVersion = 'api/v1';
+const apiVersion = '/v1'; // 接口版本
 
 const config = {
   version: 'v1.0.0',
