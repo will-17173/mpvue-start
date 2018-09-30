@@ -1,17 +1,18 @@
-import env from '../env'
+import env from '../env';
+
 const host = {
   dev: '',
   test: '',
-  prod: ''
-}[env]
-const apiVersion = 'api/v1'
+  prod: '',
+}[env];
+const apiVersion = 'api/v1';
 
 const config = {
   version: 'v1.0.0',
   baseSDKVersion: '', // 基础库最低版本
   services: { // 接口地址
     host,
-    home: `${host}/${apiVersion}/home`
+    home: `${host}/${apiVersion}/home`,
   },
   constant: {
     // 通过分享消息进小程序的场景值
@@ -27,9 +28,9 @@ const config = {
       1047, // 扫描小程序码
       1048, // 长按图片识别小程序码
       1049, // 手机相册选取小程序码
-      1014 // 小程序模版消息
-    ]
-  }
-}
+      1014, // 小程序模版消息
+    ],
+  },
+};
 
-export default config
+export default config;

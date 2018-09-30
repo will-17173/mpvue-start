@@ -1,49 +1,49 @@
 const request = {
-  get (url, data) {
+  get(url, data) {
     return new Promise((resolve, reject) => {
       wx.request({
-        url: url,
-        data: data,
+        url,
+        data,
         method: 'GET',
         header: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        success: function (res) {
+        success(res) {
           if (res.statusCode !== 200) {
             wx.showToast({
               title: '网络出错，稍后再试',
-              icon: 'none'
-            })
-            return false
+              icon: 'none',
+            });
+            return false;
           }
-          resolve(res.data)
+          resolve(res.data);
         },
-        fail: function (error) {
-          reject(error)
+        fail(error) {
+          reject(error);
         },
-        complete: function () {}
-      })
-    })
+        complete() {},
+      });
+    });
   },
-  post (url, data) {
+  post(url, data) {
     return new Promise((resolve, reject) => {
       wx.request({
-        url: url,
-        data: data,
+        url,
+        data,
         method: 'POST',
         header: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
         },
-        success: function (res) {
-          resolve(res.data)
+        success(res) {
+          resolve(res.data);
         },
-        fail: function (error) {
-          reject(error)
+        fail(error) {
+          reject(error);
         },
-        complete: function () {}
-      })
-    })
-  }
-}
+        complete() {},
+      });
+    });
+  },
+};
 
-export default request
+export default request;

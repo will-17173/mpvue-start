@@ -1,32 +1,32 @@
 <template>
   <div class="container">
+    aabbccddeeffgg
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-    }
+  data() {
+    return {};
   },
 
-  components: {
+  components: {},
+
+  methods: {},
+
+  created() {},
+  mounted() {
+    console.log(this.$root.$mp);
   },
-
-  methods: {
-
-  },
-
-  created () {
-  }
-}
+};
 </script>
 
 <style lang="scss" scoped>
-  .container{
-    background: #000;
-    a{
-      color: #fff;
-    }
+.container {
+  background: #000;
+  color: #fff;
+  a {
+    color: #fff;
   }
+}
 </style>
