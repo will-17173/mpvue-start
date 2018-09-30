@@ -11,8 +11,7 @@
   "tabBar": {
     "color": "#333",
     "selectedColor": "#9a875f",
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/main",
         "text": "首页",
         "iconPath": "/static/img/home.png",

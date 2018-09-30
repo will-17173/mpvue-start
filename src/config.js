@@ -1,14 +1,14 @@
-import env from '../env';
+import env from '../env'
 const host = {
   dev: '',
   test: '',
   prod: ''
-}[env];
-const apiVersion = 'api/v1';
+}[env]
+const apiVersion = 'api/v1'
 
 const config = {
   version: 'v1.0.0',
-  baseSDKVersion: '', //基础库最低版本
+  baseSDKVersion: '', // 基础库最低版本
   services: { // 接口地址
     host,
     home: `${host}/${apiVersion}/home`
@@ -32,4 +32,4 @@ const config = {
   }
 }
 
-export default config;
+export default config

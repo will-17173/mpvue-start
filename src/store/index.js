@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
-Vue.use(Vuex);
+Vue.use(Vuex)
 
 const state = {
 
@@ -20,7 +20,7 @@ const store = {
   actions,
   mutations,
   modules: [
-    
   ]
 }
 
+export default store
