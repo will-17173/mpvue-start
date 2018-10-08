@@ -146,6 +146,34 @@ const debounce = (func, wait) => {
   };
 };
 
+function onShareAppMessage(title, path, callback, imageUrl='/static/img/home.png') {
+  return {
+    title,
+    path,
+    imageUrl,
+    success(res) { 
+      if (!res.shareTickets) {
+        //分享到个人
+      	callback && callback();
+      } else {
+      	//分享到群
+        let st = res.shareTickets[0];
+        wx.getShareInfo({
+          shareTicket: st,
+          success(res) {
+            // let iv = res.iv
+            // let encryptedData = res.encryptedData;
+            callback && callback();
+          }
+        });
+      }
+    },
+    fail: function (res) {
+      console.log("转发失败！");
+    }
+  };
+}
+
 export default {
   formatNumber,
   formatTime,
@@ -156,4 +184,5 @@ export default {
   formatNumUnit,
   replaceTmpl,
   debounce,
+  onShareAppMessage
 };

@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import utils from '@/utils';
+
 export default {
   data() {
     return {};
@@ -18,6 +20,13 @@ export default {
   mounted() {
     console.log(this.$root.$mp);
   },
+  onShareAppMessage(){
+    let title = '', 
+      path = '/pages/index/main';
+    return utils.onShareAppMessage(title, path, function(){
+      console.log('分享成功')
+    })
+  }
 };
 </script>
 
