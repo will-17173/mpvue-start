@@ -15,12 +15,12 @@ const mutations = {
 
 };
 
-const store = {
+const store = new Vuex.Store({
   state,
   actions,
   mutations,
   modules: [
   ],
-};
+});
 
 export default store;
