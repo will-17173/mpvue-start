@@ -17,10 +17,13 @@ export default {
   methods: {},
 
   created() {},
-  mounted() {
+  async mounted() {
     this.$http.testGet().then(res => {
       console.log(res)
     })
+
+    const res = await this.$http.testGet()
+    console.log(res)
     console.log(this.$root.$mp);
   },
   onShareAppMessage(){
