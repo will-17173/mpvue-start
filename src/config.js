@@ -1,19 +1,6 @@
-import env from './env';
-
-const host = {
-  dev: 'http://localhost:8080/api',
-  test: '',
-  prod: '',
-} [env];
-const apiVersion = ''; // 接口版本
-
 const config = {
   version: 'v1.0.0',
   baseSDKVersion: '', // 基础库最低版本
-  services: { // 接口地址
-    host,
-    home: `${host}${apiVersion}/home`,
-  },
   constants: {
     // 通过分享消息进小程序的场景值
     SHARE_SCENE_CODE: [

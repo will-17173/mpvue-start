@@ -18,6 +18,9 @@ export default {
 
   created() {},
   mounted() {
+    this.$http.testGet().then(res => {
+      console.log(res)
+    })
     console.log(this.$root.$mp);
   },
   onShareAppMessage(){
@@ -28,6 +31,7 @@ export default {
     })
   }
 };
+
 </script>
 
 <style lang="scss" scoped>
