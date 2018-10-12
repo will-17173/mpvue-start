@@ -1,6 +1,6 @@
 {
   "navigationBarTitleText": "title",
   "usingComponents": {
-    "i-button": "~/iview/button/index"
+    "i-button": "/static/iview/button/index"
   }
 }
