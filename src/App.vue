@@ -1,13 +1,7 @@
 <script>
 export default {
-  data() {
-    return {
-      a: 1,
-    };
-  },
-  created() {},
+  created(){
+    console.log('111')
+  }
 };
 </script>
-
-<style>
-</style>

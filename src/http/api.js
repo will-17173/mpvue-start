@@ -15,7 +15,8 @@ const api = {
   testDel: (params) => request.delete(`${host}${apiVersion}/home` + params.id, params),
 }
 
-export default { //作为组件库(install)
+export default {
+  //作为组件库(install)
   install: function (Vue, name = '$http') {
     Object.defineProperty(Vue.prototype, name, {
       value: api
