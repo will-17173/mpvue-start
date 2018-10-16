@@ -1,6 +1,7 @@
 const Mock = require('mockjs')
 const express = require('express');
 const router = express.Router();
+const Random = Mock.Random;
 
 router.get('/', (req, res, next) => {
   res.json(Mock.mock({
