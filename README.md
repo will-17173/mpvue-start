@@ -66,6 +66,9 @@ router.get('/', (req, res, next) => {
   }))
 })
 ```
+## SASS
+添加了SASS支持
+
 ## HTTP
 http使用fly库，接口定义在`src/http/api.js`
 ```
