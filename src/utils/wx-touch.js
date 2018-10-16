@@ -1,28 +1,32 @@
 /*
-用法：
-
-<div  @touchstart="touchStart" @touchmove='touchMove' @touchend='touchEnd($event, handleSwipe)' ></div>
-
+DEMO：
+<template>
+  <div>
+    <div  @touchstart="touchStart" @touchmove='touchMove' @touchend='touchEnd($event, handleSwipe)' ></div>
+  </div>
+</template>
+<script>
 import WxTouchEvent from "../../utils/wx-touch.js";
 const TouchEvent = new WxTouchEvent();
+export default {
+  data(){
+    return {
+        handleSwipe(direction) {
+          if (direction === "Up") {
 
-data(){
-  return {
-      handleSwipe(direction) {
-        if (direction === "Up") {
+          } else if (direction === "Down") {
 
-        } else if (direction === "Down") {
-
+          }
         }
-      }
+    }
+  },
+  method: {
+      touchStart: TouchEvent.handlerTouchstart,
+      touchMove: TouchEvent.handlerTouchmove,
+      touchEnd: TouchEvent.handlerTouchend
   }
 }
-method: {
-    touchStart: TouchEvent.handlerTouchstart,
-    touchMove: TouchEvent.handlerTouchmove,
-    touchEnd: TouchEvent.handlerTouchend
-}
-
+</script>
 */
 
 function swipeDirection(x1, x2, y1, y2) {
