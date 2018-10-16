@@ -53,7 +53,7 @@ wx.cloud
 ```
 
 ## MOCK
-mock功能目录`mock`, 使用mockjs
+mock功能目录`mock`, 使用mockjs, 接口基础路径 `/api`
 ```
 const Mock = require('mockjs')
 const express = require('express');
