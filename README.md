@@ -157,3 +157,7 @@ this.$on('customEvent, data => {
     wcache.js storage强化
     wx-touch.js 手势操作
 ```
+
+## TODO
+1. 8080端口被占用情况下，mock接口自动切换新端口
+2. 登录授权组件
