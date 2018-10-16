@@ -27,7 +27,7 @@ For detailed explanation on how things work, checkout the [guide](http://vuejs-t
 #### 1. 开启云开发功能
 在微信开发者工具中点击云开发， 按提示开通云开发功能
 #### 2. 查询数据
-在数据库中新建一个集合`demo`， 直接在控制台添加一条记录  
+在`src/config.js`配置cloudEnv为你的环境ID，在数据库中新建一个集合`demo`， 直接在控制台添加一条记录  
 
 ```
 // `src/pages/index/index.vue`中的查询代码
