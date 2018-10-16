@@ -78,7 +78,7 @@ export const showSuccess = text => wx.showToast({
 });
 
 // 显示失败提示
-export const showModel = (title, content) => {
+export const showModal = (title, content) => {
   wx.hideToast();
 
   wx.showModal({

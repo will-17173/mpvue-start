@@ -1,11 +1,12 @@
 <template>
   <div class="container">
-    ccc
   </div>
 </template>
 
 <script>
 import utils from '@/utils';
+
+var app = getApp();
 
 export default {
   data() {
@@ -18,23 +19,24 @@ export default {
 
   created() {},
   async mounted() {
+    // console.log(process.env.NODE_ENV)
+
+    let pages = getCurrentPages(); // 获取加载的页面
+    let currentPage = pages[pages.length - 1];
+    // console.log(app)
     this.$http.testGet().then(res => {
-      console.log(res)
-    })
-
-    const res = await this.$http.testGet()
-    console.log(res)
-    console.log(this.$root.$mp);
+      // console.log(res)
+    });
+    const res = await this.$http.testGet();
   },
-  onShareAppMessage(){
-    let title = '', 
+  onShareAppMessage() {
+    let title = '',
       path = '/pages/index/main';
-    return utils.onShareAppMessage(title, path, function(){
-      console.log('分享成功')
-    })
-  }
+    return utils.onShareAppMessage(title, path, function() {
+      console.log('分享成功');
+    });
+  },
 };
-
 </script>
 
 <style lang="scss" scoped>
