@@ -1,6 +1,7 @@
 const config = {
   version: 'v1.0.0',
   baseSDKVersion: '', // 基础库最低版本
+  cloudEnv: 'coinfun-34c08b', // 云开发环境ID
   constants: {
     // 通过分享消息进小程序的场景值
     SHARE_SCENE_CODE: [

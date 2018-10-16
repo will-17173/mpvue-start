@@ -9,6 +9,7 @@
 	},
 	"miniprogramRoot": "dist/",
 	"compileType": "miniprogram",
+	"cloudfunctionRoot": "cloud-functions/",
 	"appid": "wxf5e63ff98b0ff452",
 	"projectname": "mpvue-start",
 	"condition": {
