@@ -152,7 +152,7 @@ export default {
   timeAgo,
   showBusy,
   showSuccess,
-  showModel,
+  showModal,
   formatNumUnit,
   replaceTmpl,
   debounce,
