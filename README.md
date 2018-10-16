@@ -78,9 +78,12 @@ const api = {
 ```
 接口挂载到Vue.$http上，调用示例：
 ```
+// Promise
 this.$http.testGet().then(res => {
     // console.log(res)
 });
+
+//async/await
 const res = await this.$http.testGet();
 ```
 
@@ -98,6 +101,25 @@ this.$on('customEvent, data => {
 })
 ```
 
+## 原生组件引用
+原生组件库如iview, vant, wux等，将dist里需要的组件拷入static目录，注意如果组件有依赖其它组件也需要一起拷入。  
+之后在页面的main.json里定义组件
+```
+{
+  "navigationBarTitleText": "title",
+  "usingComponents": {
+    "i-button": "/static/iview/button/index"
+  }
+}
+```
+即可在页面中使用
+```
+<template>
+    <div>
+        <i-button />
+    </div>
+</template>
+```
 
 
 ## 目录结构
